@@ -1,0 +1,9 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    color: $colour-secondary;
+    background-color: $colour-primary;
+    margin-top: 3rem;
+    padding: 2rem;
+    font-weight: bolder;
+}
