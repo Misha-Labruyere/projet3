@@ -1,0 +1,28 @@
+.esquisse,
+.maitre,
+.art {
+  list-style-type: none;
+}
+
+section {
+  &.carte-4 {
+    background-color: $background-palette;
+    font-family: $font-enchantee-carte;
+    color: $colour-palette;
+    & h2 {
+      font-family: $font-palette;
+    }
+  }
+}
+
+ul.esquisse,
+ul.maitre,
+ul.art {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+li.intitules {
+  min-width: 70%;
+}

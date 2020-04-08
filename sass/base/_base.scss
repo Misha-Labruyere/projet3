@@ -1,8 +1,27 @@
 * {
-    margin-block-start: 0px;
+  margin-block-start: 0px;
 }
 body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav, section {
+    max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
-    width: 1024px;
+}
+
+section {
+  box-shadow: 5px 5px 20px 5px rgb(240, 240, 240);
+
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+footer {
+    @include footer;
 }

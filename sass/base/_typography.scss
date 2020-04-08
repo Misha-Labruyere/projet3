@@ -1,35 +1,47 @@
-body {
-    font-family: 'Roboto', sans-serif;
+body,
+h1,
+footer,
+.prochainement {
+  font-family: $font-base;
+
+  & body {
     font-size: 2rem;
     font-weight: 100;
     line-height: 1.7;
-}
+  }
 
-h1 {
-    font-family: 'Inter', sans-serif;
+  & h1 {
     color: $colour-secondary;
     text-align: center;
-    font-size: 5rem;
+    font-size: 5.5rem;
     font-weight: bold;
-}
+  }
 
-footer {
-    font-family: 'Roboto', sans-serif;
+  & footer {
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+  & .prochainement {
+      font-size: 1.5rem;
+  }
 }
 
 ul {
-    li:nth-child(1) {
-        font-family: 'Zhi Mang Xing', cursive;
-    }
-    li:nth-child(2) {
-        font-family: 'Yesteryear', cursive;
-    }
-    li:nth-child(3) {
-        font-family: 'Dancing Script', cursive;
-    }
-    li:nth-child(4) {
-        font-family: 'Kaushan Script', cursive;
-    }
+  li.page-enchantee {
+    font-family: $font-enchantee;
+    font-size: 1.9rem;
+  }
+  li.page-chic {
+    font-family: $font-chic;
+    font-size: 1.3rem;
+  }
+  li.page-delice {
+    font-family: $font-delice;
+    font-size: 1.7rem;
+  }
+  li.page-palette {
+    font-family: $font-palette;
+    font-size: 1.7rem;
+  }
 }

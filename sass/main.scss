@@ -3,9 +3,14 @@
 
 @import "./base/base";
 @import "./base/typography";
+@import "./base/media";
 
 
 @import "./layout/header";
 @import "./layout/nav";
 @import "./layout/footer";
 
+@import "./pages/page_1";
+@import "./pages/page_2";
+@import "./pages/page_3";
+@import "./pages/page_4";

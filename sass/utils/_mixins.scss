@@ -1,1 +1,13 @@
+@mixin heading-text{
+    text-align: center;
+}
 
+@mixin heading-text-media {
+    text-align: start;
+}
+
+@mixin footer {
+    & a, a:visited {
+    color: $colour-secondary;
+    }
+}

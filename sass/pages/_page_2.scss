@@ -1,0 +1,27 @@
+.appetit,
+.papilles,
+.sucre {
+  list-style-type: none;
+}
+
+section {
+  &.carte-2 {
+    background-color: $background-chic;
+    font-family: $font-enchantee-carte;
+    color: $colour-chic;
+    &h2 {
+      font-family: $font-chic;
+    }
+  }
+}
+
+ul.appetit,
+ul.papilles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+li.intitules {
+  min-width: 70%;
+}

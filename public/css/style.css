@@ -5,43 +5,114 @@
 body {
   margin-left: auto;
   margin-right: auto;
-  width: 1024px;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
+nav, section {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  box-shadow: 5px 5px 20px 5px #f0f0f0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+footer a, footer a:visited {
+  color: #fdcb46;
+}
+
+body,
+h1,
+footer,
+.prochainement {
+  font-family: "Inter", sans-serif;
+}
+body body,
+h1 body,
+footer body,
+.prochainement body {
   font-size: 2rem;
   font-weight: 100;
   line-height: 1.7;
 }
-
-h1 {
-  font-family: "Inter", sans-serif;
+body h1,
+h1 h1,
+footer h1,
+.prochainement h1 {
   color: #fdcb46;
   text-align: center;
-  font-size: 5rem;
+  font-size: 5.5rem;
   font-weight: bold;
 }
-
-footer {
-  font-family: "Roboto", sans-serif;
+body footer,
+h1 footer,
+footer footer,
+.prochainement footer {
   font-weight: 100;
+  font-size: 1rem;
+}
+body .prochainement,
+h1 .prochainement,
+footer .prochainement,
+.prochainement .prochainement {
   font-size: 1.5rem;
 }
 
-ul li:nth-child(1) {
+ul li.page-enchantee {
   font-family: "Zhi Mang Xing", cursive;
+  font-size: 1.9rem;
 }
-ul li:nth-child(2) {
-  font-family: "Yesteryear", cursive;
+ul li.page-chic {
+  font-family: "Amita", cursive;
+  font-size: 1.3rem;
 }
-ul li:nth-child(3) {
+ul li.page-delice {
   font-family: "Dancing Script", cursive;
+  font-size: 1.7rem;
 }
-ul li:nth-child(4) {
+ul li.page-palette {
   font-family: "Kaushan Script", cursive;
+  font-size: 1.7rem;
 }
 
+@media (max-width: 1024px) {
+  * {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+  }
+
+  .sommaire {
+    max-width: 100%;
+  }
+
+  li {
+    min-width: 100%;
+    max-height: 1rem;
+    justify-content: center;
+  }
+
+  section {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .intitules, .prix {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
 header {
   background: #579c87;
   height: 10rem;
@@ -62,42 +133,49 @@ nav ul {
 nav ul li {
   display: flex;
   flex-direction: column;
-  padding-top: 11rem;
-  padding-bottom: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 11rem;
+  justify-content: center;
   font-size: 1.6rem;
   text-align: center;
-  height: 16rem;
   width: 22rem;
   margin-top: 5rem;
   list-style-type: none;
   box-shadow: 5px 5px 10px lightgrey;
 }
 nav ul li:nth-child(1) {
-  color: #3c1218;
   background-color: #fcdfdb;
 }
+nav ul li:nth-child(1) a {
+  color: #3c1218;
+}
 nav ul li:nth-child(2) {
-  color: #c77412;
   background-color: #fff5fe;
 }
+nav ul li:nth-child(2) a {
+  color: #c77412;
+}
 nav ul li:nth-child(3) {
-  color: #0887fb;
   background-color: #f9f9f9;
 }
+nav ul li:nth-child(3) a {
+  color: #0887fb;
+}
 nav ul li:nth-child(4) {
-  color: #72bf56;
   background-color: #fdfffd;
 }
-nav .prochainement {
+nav ul li:nth-child(4) a {
+  color: #72bf56;
+}
+
+.prochainement {
   display: flex;
-  font-style: italic;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
   width: 20rem;
   justify-content: center;
   padding-top: 1rem;
-  font-size: 0.7em;
   border: 1px solid black;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -114,7 +192,162 @@ footer {
   background-color: #579c87;
   margin-top: 3rem;
   padding: 2rem;
-  font-weight: bolder;
+}
+footer a:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+.prelude,
+.orgue,
+.final {
+  list-style-type: none;
+}
+
+section.carte-1 {
+  background-color: #fcdfdb;
+  font-family: "Kalam", cursive;
+  color: #3c1218;
+}
+section.carte-1 h2 {
+  font-family: "Zhi Mang Xing", cursive;
+}
+
+ul.prelude, ul.orgue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ul {
+  color: inherit;
+  text-decoration: none;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 4px, transparent 5px) no-repeat;
+  background-size: 0 100%;
+  transition: background-size 0.3s;
+}
+ul ul:hover {
+  background-size: 100% 100%;
+}
+
+.appetit,
+.papilles,
+.sucre {
+  list-style-type: none;
+}
+
+section.carte-2 {
+  background-color: #fff5fe;
+  font-family: "Kalam", cursive;
+  color: #c77412;
+}
+section.carte-2h2 {
+  font-family: "Amita", cursive;
+}
+
+ul.appetit,
+ul.papilles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+li.intitules {
+  min-width: 70%;
+}
+
+.commencer,
+.continuer,
+.terminer {
+  list-style-type: none;
+}
+
+section.carte-3 {
+  background-color: #f9f9f9;
+  font-family: "Kalam", cursive;
+  color: #0887fb;
+}
+section.carte-3 h2 {
+  font-family: "Dancing Script", cursive;
+}
+
+ul.commencer,
+ul.continuer,
+ul.terminer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+li.intitules {
+  min-width: 70%;
+}
+
+.esquisse,
+.maitre,
+.art {
+  list-style-type: none;
+}
+
+section.carte-4 {
+  background-color: #fdfffd;
+  font-family: "Kalam", cursive;
+  color: #72bf56;
+}
+section.carte-4 h2 {
+  font-family: "Kaushan Script", cursive;
+}
+
+ul.esquisse,
+ul.maitre,
+ul.art {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+li.intitules {
+  min-width: 70%;
 }
 
 /*# sourceMappingURL=style.css.map */
