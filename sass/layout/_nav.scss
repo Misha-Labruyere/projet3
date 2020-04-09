@@ -45,23 +45,28 @@ nav {
         color: $colour-palette;
       }
     }
+
+    .page-enchantee {
+      & h2 {
+        margin-top: 0px;
+      }
+    }
   }
 }
 
 .prochainement {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    width: 20rem;
-    justify-content: center;
-    padding-top: 1rem;
-    border: 1px solid black;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: $colour-primary;
-    color: $colour-secondary;
-  }
-
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  width: 20rem;
+  justify-content: center;
+  border: 1px solid black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: $colour-primary;
+  color: $colour-secondary;
+}

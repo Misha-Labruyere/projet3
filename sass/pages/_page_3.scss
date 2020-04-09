@@ -4,6 +4,14 @@
   list-style-type: none;
 }
 
+li.page-delice {
+  h2 {
+    background: linear-gradient(to right, #0431df, $colour-delice);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 section {
   &.carte-3 {
     background-color: $background-delice;
@@ -25,4 +33,11 @@ ul.terminer {
 
 li.intitules {
   min-width: 70%;
+}
+
+@include underline-section-delice;
+
+.line-delice {
+  padding-right: 50px;
+  padding-left: 50px;
 }

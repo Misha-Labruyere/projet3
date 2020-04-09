@@ -4,12 +4,21 @@
 body {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  & h1 {
+    padding-bottom: 20px;
+  }
 }
 
 nav, section {
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 2px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 150px;
 }
 
 section {
@@ -24,4 +33,24 @@ a:visited {
 
 footer {
     @include footer;
+}
+
+h3 :not(.prochainement) {
+  margin-top: 50px;
+}
+
+h2:last-child {
+  margin-top: 70px;
+}
+
+li {
+  line-height: 3rem;
+}
+
+.prix {
+  padding-right: 100px;
+}
+
+.intitules {
+  padding-left: 70px;
 }

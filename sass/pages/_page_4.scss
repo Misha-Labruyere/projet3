@@ -4,6 +4,14 @@
   list-style-type: none;
 }
 
+li.page-palette {
+  h2 {
+    background: linear-gradient(to right, $colour-palette,#b7f97b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 section {
   &.carte-4 {
     background-color: $background-palette;
@@ -25,4 +33,11 @@ ul.art {
 
 li.intitules {
   min-width: 70%;
+}
+
+@include underline-section-palette;
+
+.line-palette {
+  padding-left: 50px;
+  padding-right: 50px;
 }

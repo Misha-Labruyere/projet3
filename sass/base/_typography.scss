@@ -1,14 +1,8 @@
-body,
-h1,
-footer,
-.prochainement {
+body {
   font-family: $font-base;
-
-  & body {
-    font-size: 2rem;
-    font-weight: 100;
-    line-height: 1.7;
-  }
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.7;
 
   & h1 {
     color: $colour-secondary;
@@ -19,22 +13,38 @@ footer,
 
   & footer {
     font-weight: 100;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   & .prochainement {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  & h2 {
+    font-size: 3.5rem;
+  }
+
+  & h3 {
+    font-size: 2rem;
+  }
+
+  & li {
+    font-size: 1.2rem;
   }
 }
 
 ul {
   li.page-enchantee {
-    font-family: $font-enchantee;
-    font-size: 1.9rem;
+    & a {
+      font-family: $font-enchantee;
+      font-size: 1.9rem;
+    }
   }
   li.page-chic {
-    font-family: $font-chic;
-    font-size: 1.3rem;
+    & a {
+      font-family: $font-chic;
+      font-size: 1.3rem;
+    }
   }
   li.page-delice {
     font-family: $font-delice;
@@ -44,4 +54,8 @@ ul {
     font-family: $font-palette;
     font-size: 1.7rem;
   }
+}
+
+h2:last-child {
+  font-size: 2.8rem;
 }

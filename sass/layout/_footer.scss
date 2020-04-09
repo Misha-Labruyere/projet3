@@ -4,7 +4,12 @@ footer {
   color: $colour-secondary;
   background-color: $colour-primary;
   margin-top: 3rem;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
 
   & a:hover {
     animation: shake 0.5s;

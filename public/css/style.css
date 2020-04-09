@@ -5,12 +5,21 @@
 body {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+}
+body h1 {
+  padding-bottom: 20px;
 }
 
 nav, section {
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 2px;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-bottom: 150px;
 }
 
 section {
@@ -22,52 +31,66 @@ a:visited {
   text-decoration: none;
 }
 
-footer a, footer a:visited {
+footer a,
+footer a:visited {
   color: #fdcb46;
+  padding-right: 50px;
 }
 
-body,
-h1,
-footer,
-.prochainement {
-  font-family: "Inter", sans-serif;
+h3 :not(.prochainement) {
+  margin-top: 50px;
 }
-body body,
-h1 body,
-footer body,
-.prochainement body {
+
+h2:last-child {
+  margin-top: 70px;
+}
+
+li {
+  line-height: 3rem;
+}
+
+.prix {
+  padding-right: 100px;
+}
+
+.intitules {
+  padding-left: 70px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
   font-size: 2rem;
   font-weight: 100;
   line-height: 1.7;
 }
-body h1,
-h1 h1,
-footer h1,
-.prochainement h1 {
+body h1 {
   color: #fdcb46;
   text-align: center;
   font-size: 5.5rem;
   font-weight: bold;
 }
-body footer,
-h1 footer,
-footer footer,
-.prochainement footer {
+body footer {
   font-weight: 100;
-  font-size: 1rem;
-}
-body .prochainement,
-h1 .prochainement,
-footer .prochainement,
-.prochainement .prochainement {
   font-size: 1.5rem;
 }
+body .prochainement {
+  font-size: 1.5rem;
+}
+body h2 {
+  font-size: 3.5rem;
+}
+body h3 {
+  font-size: 2rem;
+}
+body li {
+  font-size: 1.2rem;
+}
 
-ul li.page-enchantee {
+ul li.page-enchantee a {
   font-family: "Zhi Mang Xing", cursive;
   font-size: 1.9rem;
 }
-ul li.page-chic {
+ul li.page-chic a {
   font-family: "Amita", cursive;
   font-size: 1.3rem;
 }
@@ -80,44 +103,122 @@ ul li.page-palette {
   font-size: 1.7rem;
 }
 
+h2:last-child {
+  font-size: 2.8rem;
+}
+
 @media (max-width: 1024px) {
   * {
     margin-left: 0px;
     margin-top: 0px;
   }
 
-  ul {
+  body {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  body h1 {
+    font-size: 3.5rem;
+  }
+  body h2 {
+    font-size: 2.3rem;
+  }
+  body h2:last-child {
+    font-size: 2rem;
+  }
+  body h3 {
+    font-size: 1.7rem;
+    padding-bottom: 5px;
+    margin-bottom: 60px;
+  }
+  body .carte-1 h3 {
+    border: #3c1218 thick double;
+  }
+  body .carte-2 h3 {
+    border: #c77412 thick double;
+  }
+  body .carte-3 h3 {
+    border: #54a8f9 thick double;
+  }
+  body .carte-4 h3 {
+    border: #72bf56 thick double;
+  }
+  body ul {
     display: flex;
     flex-direction: column;
-    padding-inline-start: 20px;
-    padding-inline-end: 20px;
+    padding-inline-start: 0px;
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  .sommaire {
+  body header {
+    min-height: 25%;
+  }
+  body .sommaire {
     max-width: 100%;
   }
-
-  li {
-    min-width: 100%;
-    max-height: 1rem;
+  body li {
     justify-content: center;
+    max-width: 100%;
   }
-
-  section {
+  body .page-enchantee,
+body .page-chic,
+body .page-delice,
+body .page-palette {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  body .page-enchantee h2,
+body .page-chic h2,
+body .page-delice h2,
+body .page-palette h2 {
+    margin-top: 10px;
+  }
+  body .page-enchantee {
+    margin-top: 0px;
+  }
+  body section {
     margin-left: 20px;
     margin-right: 20px;
   }
-
-  .intitules, .prix {
+  body .intitules,
+body .prix {
     text-align: center;
-    margin-bottom: 30px;
+  }
+  body .line-enchantee,
+body .line-chic,
+body .line-delice,
+body .line-palette {
+    display: none;
+  }
+  body .prix {
+    padding-right: 0px;
+    margin-bottom: 20px;
+  }
+  body .intitules {
+    padding-left: 0px;
+  }
+  body footer {
+    padding-right: 0rem;
+    font-size: 1rem;
+  }
+  body .note-musique {
+    position: relative;
+    left: 1%;
+  }
+  body .prochainement {
+    width: 12rem;
+  }
+  body .prochainement h3 {
+    font-size: 1rem;
   }
 }
 header {
   background: #579c87;
-  height: 10rem;
+  max-height: 25%;
   padding-top: 1rem;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 nav {
@@ -159,7 +260,7 @@ nav ul li:nth-child(3) {
   background-color: #f9f9f9;
 }
 nav ul li:nth-child(3) a {
-  color: #0887fb;
+  color: #54a8f9;
 }
 nav ul li:nth-child(4) {
   background-color: #fdfffd;
@@ -167,15 +268,18 @@ nav ul li:nth-child(4) {
 nav ul li:nth-child(4) a {
   color: #72bf56;
 }
+nav ul .page-enchantee h2 {
+  margin-top: 0px;
+}
 
 .prochainement {
   display: flex;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
+  padding-top: 1rem;
   width: 20rem;
   justify-content: center;
-  padding-top: 1rem;
   border: 1px solid black;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -191,7 +295,12 @@ footer {
   color: #fdcb46;
   background-color: #579c87;
   margin-top: 3rem;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
 }
 footer a:hover {
   animation: shake 0.5s;
@@ -238,6 +347,12 @@ h3 {
   text-align: center;
 }
 
+.note-musique {
+  position: relative;
+  left: 44%;
+  margin-top: 20px;
+}
+
 .prelude,
 .orgue,
 .final {
@@ -253,27 +368,48 @@ section.carte-1 h2 {
   font-family: "Zhi Mang Xing", cursive;
 }
 
-ul.prelude, ul.orgue {
+ul.prelude,
+ul.orgue {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-ul {
-  color: inherit;
-  text-decoration: none;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 4px, transparent 5px) no-repeat;
-  background-size: 0 100%;
-  transition: background-size 0.3s;
+section.carte-1 h3 span {
+  position: relative;
 }
-ul ul:hover {
-  background-size: 100% 100%;
+section.carte-1 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #3c1218;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-1 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.line-enchantee {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .appetit,
 .papilles,
 .sucre {
   list-style-type: none;
+}
+
+li.page-chic h2 {
+  background: linear-gradient(to left, #905bfd, #c77412);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 section.carte-2 {
@@ -296,16 +432,47 @@ li.intitules {
   min-width: 70%;
 }
 
+section.carte-2 h3 span {
+  position: relative;
+}
+section.carte-2 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #c77412;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-2 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.line-chic {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
 .commencer,
 .continuer,
 .terminer {
   list-style-type: none;
 }
 
+li.page-delice h2 {
+  background: linear-gradient(to right, #0431df, #54a8f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 section.carte-3 {
   background-color: #f9f9f9;
   font-family: "Kalam", cursive;
-  color: #0887fb;
+  color: #54a8f9;
 }
 section.carte-3 h2 {
   font-family: "Dancing Script", cursive;
@@ -323,10 +490,41 @@ li.intitules {
   min-width: 70%;
 }
 
+section.carte-3 h3 span {
+  position: relative;
+}
+section.carte-3 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #54a8f9;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-3 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.line-delice {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
 .esquisse,
 .maitre,
 .art {
   list-style-type: none;
+}
+
+li.page-palette h2 {
+  background: linear-gradient(to right, #72bf56, #b7f97b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 section.carte-4 {
@@ -348,6 +546,31 @@ ul.art {
 
 li.intitules {
   min-width: 70%;
+}
+
+section.carte-4 h3 span {
+  position: relative;
+}
+section.carte-4 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #72bf56;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-4 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.line-palette {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

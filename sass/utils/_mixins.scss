@@ -1,13 +1,122 @@
-@mixin heading-text{
-    text-align: center;
+@mixin heading-text {
+  text-align: center;
 }
 
 @mixin heading-text-media {
-    text-align: start;
+  text-align: start;
 }
 
 @mixin footer {
-    & a, a:visited {
+  & a,
+  a:visited {
     color: $colour-secondary;
+    padding-right: 50px;
+  }
+}
+
+@mixin underline-section-enchantee {
+  section {
+    &.carte-1 {
+      h3 span {
+        position: relative;
+      }
+      h3 span:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $colour-enchantee;
+        transform-origin: bottom right;
+        transition: transform 0.55s ease-out;
+      }
+      h3 span:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
     }
+  }
+}
+
+@mixin underline-section-chic {
+  section {
+    &.carte-2 {
+      h3 span {
+        position: relative;
+      }
+
+      h3 span:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $colour-chic;
+        transform-origin: bottom right;
+        transition: transform 0.55s ease-out;
+      }
+      h3 span:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+}
+
+@mixin underline-section-delice {
+  section {
+    &.carte-3 {
+      h3 span {
+        position: relative;
+      }
+
+      h3 span:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $colour-delice;
+        transform-origin: bottom right;
+        transition: transform 0.55s ease-out;
+      }
+      h3 span:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+}
+
+@mixin underline-section-palette {
+  section {
+    &.carte-4 {
+      h3 span {
+        position: relative;
+      }
+
+      h3 span:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $colour-palette;
+        transform-origin: bottom right;
+        transition: transform 0.55s ease-out;
+      }
+      h3 span:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
 }

@@ -4,6 +4,14 @@
   list-style-type: none;
 }
 
+li.page-chic {
+  h2 {
+    background: linear-gradient(to left, #905bfd, $colour-chic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 section {
   &.carte-2 {
     background-color: $background-chic;
@@ -24,4 +32,12 @@ ul.papilles {
 
 li.intitules {
   min-width: 70%;
+}
+
+@include underline-section-chic;
+
+
+.line-chic {
+  padding-right: 50px;
+  padding-left: 50px;
 }
