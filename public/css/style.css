@@ -86,44 +86,44 @@ body li {
   font-size: 1.2rem;
 }
 
-ul li.page-enchantee a {
-  font-family: "Kaushan Script", cursive;
-}
+ul li.page-enchantee a,
 ul li.page-enchantee h2:last-child {
   font-family: "Zhi Mang Xing", cursive;
   font-size: 2.7rem;
 }
 ul li.page-enchantee h2:last-child:hover {
-  font-size: 3.5rem;
-  transform: perspective(1);
-  transition: ease-in-out 0.8s;
+  transform: scale(1.2);
+  transition: ease-in-out 1.8s;
 }
-ul li.page-chic a, ul li.page-chic h2:last-child {
+ul li.page-enchantee a {
+  font-family: "Kaushan Script", cursive;
+}
+ul li.page-chic a,
+ul li.page-chic h2:last-child {
   font-family: "Amita", cursive;
   font-size: 2.3rem;
 }
 ul li.page-chic h2:last-child:hover {
-  font-size: 2.8rem;
-  transform: perspective(1);
+  transform: scale(1.2);
   transition: ease-in-out 1.8s;
 }
-ul li.page-delice a, ul li.page-delice h2:last-child {
+ul li.page-delice a,
+ul li.page-delice h2:last-child {
   font-family: "Dancing Script", cursive;
   font-size: 2.3rem;
 }
 ul li.page-delice h2:last-child:hover {
-  font-size: 2.8rem;
-  transform: perspective(1);
-  transition: ease-in-out 0.8s;
+  transform: scale(1.2);
+  transition: ease-in-out 1.8s;
 }
-ul li.page-palette a, ul li.page-palette h2:last-child {
+ul li.page-palette a,
+ul li.page-palette h2:last-child {
   font-family: "Kaushan Script", cursive;
   font-size: 2.3rem;
 }
 ul li.page-palette h2:last-child:hover {
-  font-size: 2.8rem;
-  transform: perspective(1);
-  transition: ease-in-out 0.8s;
+  transform: scale(1.2);
+  transition: ease-in-out 1.8s;
 }
 
 h2:last-child {
@@ -273,6 +273,11 @@ nav ul li {
   margin-top: 5rem;
   list-style-type: none;
   box-shadow: 5px 5px 10px lightgrey;
+  transition: 0.5s;
+}
+nav ul li:hover {
+  box-shadow: 5px 10px 15px lightgrey;
+  opacity: 0.85;
 }
 nav ul li:nth-child(1) {
   background-color: #fcdfdb;

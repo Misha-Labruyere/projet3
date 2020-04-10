@@ -120,3 +120,15 @@
     }
   }
 }
+
+@mixin titre-menu($family, $size) {
+  & a,
+  h2:last-child {
+    font-family: $family;
+    font-size: $size;
+  }
+  & h2:last-child:hover {
+    transform: scale(1.2);
+    transition: ease-in-out 1.8s;
+  }
+}

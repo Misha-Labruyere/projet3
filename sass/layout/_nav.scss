@@ -18,6 +18,11 @@ nav {
       margin-top: 5rem;
       list-style-type: none;
       box-shadow: 5px 5px 10px lightgrey;
+      transition: 0.5s;
+      &:hover {
+        box-shadow: 5px 10px 15px lightgrey;
+        opacity: 0.85;
+      }
     }
 
     li:nth-child(1) {

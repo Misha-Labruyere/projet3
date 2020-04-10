@@ -35,51 +35,21 @@ body {
 
 ul {
   li.page-enchantee {
+    @include titre-menu($font-enchantee, 2.7rem);
     & a {
       font-family: $font-palette;
     }
-    & h2:last-child {
-      font-family: $font-enchantee;
-      font-size: 2.7rem;
-    }
-    & h2:last-child:hover {
-      font-size: 3.5rem;
-      transform: perspective(1);
-      transition: ease-in-out 0.8s;
-    }
   }
+
   li.page-chic {
-    & a, h2:last-child {
-      font-family: $font-chic;
-      font-size: 2.3rem;
-    }
-    & h2:last-child:hover {
-      font-size: 2.8rem;
-      transform: perspective(1);
-      transition: ease-in-out 1.8s;
-    }
+    @include titre-menu($font-chic, 2.3rem);
   }
+
   li.page-delice {
-    & a, h2:last-child {
-    font-family: $font-delice;
-    font-size: 2.3rem;
-    }
-    & h2:last-child:hover {
-      font-size: 2.8rem;
-      transform: perspective(1);
-      transition: ease-in-out 0.8s;
-    }
+    @include titre-menu($font-delice, 2.3rem);
   }
   li.page-palette {
-    & a, h2:last-child {
-    font-family: $font-palette;
-    font-size: 2.3rem;
-    }
-    & h2:last-child:hover {
-      font-size: 2.8rem;
-      transform: perspective(1);
-      transition: ease-in-out 0.8s;
-    }
+    @include titre-menu($font-palette, 2.3rem);
   }
 }
 
