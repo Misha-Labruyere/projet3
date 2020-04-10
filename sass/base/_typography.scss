@@ -1,27 +1,58 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    color: $colour-primary;
-    font-size: 2rem;
+  font-family: $font-base;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.7;
+
+  & h1 {
+    color: $colour-secondary;
+    text-align: center;
+    font-size: 5.5rem;
+    font-weight: bold;
+  }
+
+  & footer {
     font-weight: 100;
-    line-height: 1.7;
-}
+    font-size: 1.5rem;
+  }
 
-h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 5rem;
-    font-style: italic;
-}
+  & .prochainement {
+    font-size: 1.5rem;
+  }
 
-textarea {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+  & h2 {
+    font-size: 3.5rem;
+  }
+
+  & h3 {
     font-size: 2rem;
+  }
+
+  & li {
+    font-size: 1.2rem;
+  }
 }
 
-button {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 2.75rem;
+ul {
+  li.page-enchantee {
+    @include titre-menu($font-enchantee, 2.7rem);
+    & a {
+      font-family: $font-palette;
+    }
+  }
+
+  li.page-chic {
+    @include titre-menu($font-chic, 2.3rem);
+  }
+
+  li.page-delice {
+    @include titre-menu($font-delice, 2.3rem);
+  }
+  li.page-palette {
+    @include titre-menu($font-palette, 2.3rem);
+  }
+}
+
+h2:last-child {
+  font-size: 2.8rem;
 }

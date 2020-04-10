@@ -1,0 +1,43 @@
+.esquisse,
+.maitre,
+.art {
+  list-style-type: none;
+}
+
+li.page-palette {
+  h2 {
+    background: linear-gradient(to right, $colour-palette,#b7f97b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+section {
+  &.carte-4 {
+    background-color: $background-palette;
+    font-family: $font-enchantee-carte;
+    color: $colour-palette;
+    & h2 {
+      font-family: $font-palette;
+    }
+  }
+}
+
+ul.esquisse,
+ul.maitre,
+ul.art {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+li.intitules {
+  min-width: 70%;
+}
+
+@include underline-section-palette;
+
+.line-palette {
+  padding-left: 50px;
+  padding-right: 50px;
+}

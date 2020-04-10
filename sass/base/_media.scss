@@ -1,0 +1,142 @@
+@media (max-width: 1024px) {
+  * {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  body {
+
+    img {
+      size: 30%;
+    }
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    h2 {
+      font-size: 2.3rem;
+    }
+
+    h2:last-child {
+      font-size: 2rem;
+    }
+
+    h3 :not.prochainement {
+      font-size: 1.7rem;
+      padding-bottom: 5px;
+      margin-bottom: 60px;
+    }
+
+    .carte-1 {
+      & h3 {
+        border: $colour-enchantee thick double;
+      }
+    }
+
+    .carte-2 {
+      & h3 {
+        border: $colour-chic thick double;
+      }
+    }
+
+    .carte-3 {
+      & h3 {
+        border: $colour-delice thick double;
+      }
+    }
+    .carte-4 {
+      & h3 {
+        border: $colour-palette thick double;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      padding-inline-start: 0px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header {
+      min-height: 25%;
+    }
+
+    .sommaire {
+      max-width: 100%;
+    }
+
+    li {
+      justify-content: center;
+      max-width: 100%;
+    }
+
+    .page-enchantee,
+    .page-chic,
+    .page-delice,
+    .page-palette {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      & h2 {
+        margin-top: 10px;
+      }
+    }
+    .page-enchantee {
+      margin-top: 0px;
+    }
+
+    section {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .intitules,
+    .prix {
+      text-align: center;
+    }
+
+    .line-enchantee,
+    .line-chic,
+    .line-delice,
+    .line-palette {
+      display: none;
+    }
+
+    .prix {
+      padding-right: 0px;
+      margin-bottom: 20px;
+    }
+
+    .intitules {
+      padding-left: 0px;
+    }
+
+    footer {
+      padding-right: 0rem;
+      font-size: 1rem;
+    }
+
+    .note-musique {
+      position: relative;
+      left: 1%;
+    }
+
+    .prochainement {
+      width: 12rem;
+      & h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+  nav {
+    ul {
+      li {
+        min-width: 100%;
+      }
+    }
+  }
+}

@@ -1,17 +1,56 @@
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+* {
+  margin-block-start: 0px;
 }
-
-html {
-    // 10px div by def of 16px
-    font-size: 62.5%;
-}
-
 body {
-    box-sizing: border-box;
-    background: $colour-secondary;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  & h1 {
+    padding-bottom: 20px;
+  }
+}
+
+nav, section {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 150px;
+}
+
+section {
+  box-shadow: 5px 5px 20px 5px rgb(240, 240, 240);
+
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+footer {
+    @include footer;
+}
+
+h3 :not(.prochainement) {
+  margin-top: 50px;
+}
+
+h2:last-child {
+  margin-top: 70px;
+}
+
+.carte-1, .carte-2, .carte-3, .carte-4{
+  line-height: 3.5rem;
+}
+
+.prix {
+  padding-right: 100px;
+}
+
+.intitules {
+  padding-left: 70px;
 }

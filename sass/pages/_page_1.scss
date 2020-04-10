@@ -1,0 +1,41 @@
+h2,
+h3 {
+  @include heading-text;
+}
+
+.note-musique {
+  position: relative;
+  left: 44%;
+  margin-top: 20px;
+}
+
+.prelude,
+.orgue,
+.final {
+  list-style-type: none;
+}
+
+section {
+  &.carte-1 {
+    background-color: $background-enchantee;
+    font-family: $font-enchantee-carte;
+    color: $colour-enchantee;
+    & h2 {
+      font-family: $font-enchantee;
+    }
+  }
+}
+
+ul.prelude,
+ul.orgue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@include underline-section-enchantee;
+
+.line-enchantee {
+  padding-left: 50px;
+  padding-right: 50px;
+}
