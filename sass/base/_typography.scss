@@ -36,23 +36,50 @@ body {
 ul {
   li.page-enchantee {
     & a {
+      font-family: $font-palette;
+    }
+    & h2:last-child {
       font-family: $font-enchantee;
-      font-size: 1.9rem;
+      font-size: 2.7rem;
+    }
+    & h2:last-child:hover {
+      font-size: 3.5rem;
+      transform: perspective(1);
+      transition: ease-in-out 0.8s;
     }
   }
   li.page-chic {
-    & a {
+    & a, h2:last-child {
       font-family: $font-chic;
-      font-size: 1.3rem;
+      font-size: 2.3rem;
+    }
+    & h2:last-child:hover {
+      font-size: 2.8rem;
+      transform: perspective(1);
+      transition: ease-in-out 1.8s;
     }
   }
   li.page-delice {
+    & a, h2:last-child {
     font-family: $font-delice;
-    font-size: 1.7rem;
+    font-size: 2.3rem;
+    }
+    & h2:last-child:hover {
+      font-size: 2.8rem;
+      transform: perspective(1);
+      transition: ease-in-out 0.8s;
+    }
   }
   li.page-palette {
+    & a, h2:last-child {
     font-family: $font-palette;
-    font-size: 1.7rem;
+    font-size: 2.3rem;
+    }
+    & h2:last-child:hover {
+      font-size: 2.8rem;
+      transform: perspective(1);
+      transition: ease-in-out 0.8s;
+    }
   }
 }
 
