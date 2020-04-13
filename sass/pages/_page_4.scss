@@ -4,9 +4,10 @@
   list-style-type: none;
 }
 
-li.page-palette {
+li.page-palette, .carte-4 {
   h2 {
     background: linear-gradient(to right, $colour-palette,#b7f97b);
+    min-height: 70px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -15,9 +16,9 @@ li.page-palette {
 section {
   &.carte-4 {
     background-color: $background-palette;
-    font-family: $font-enchantee-carte;
-    color: $colour-palette;
+    font-family: $font-delice;
     & h2 {
+      margin-top: 20px;
       font-family: $font-palette;
     }
   }
@@ -33,6 +34,10 @@ ul.art {
 
 li.intitules {
   min-width: 70%;
+}
+
+ul.art {
+  padding-bottom: 150px;
 }
 
 @include underline-section-palette;

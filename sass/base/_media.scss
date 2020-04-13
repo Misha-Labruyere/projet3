@@ -5,7 +5,6 @@
   }
 
   body {
-
     img {
       size: 30%;
     }
@@ -18,7 +17,7 @@
     }
 
     h2 {
-      font-size: 2.3rem;
+      font-size: 2rem;
     }
 
     h2:last-child {
@@ -33,24 +32,37 @@
 
     .carte-1 {
       & h3 {
-        border: $colour-enchantee thick double;
+        border-bottom: $colour-enchantee solid;
       }
     }
 
     .carte-2 {
       & h3 {
-        border: $colour-chic thick double;
+        font-size: 1.6rem;
+        border-bottom: $colour-chic solid;
+      }
+      & .titre-papilles {
+        border-bottom: #a56799 solid;
+      }
+      & .titre-sucre {
+        border-bottom: #6e4ccc solid;
       }
     }
 
     .carte-3 {
+      & h2 {
+        font-size: 3rem;
+      }
       & h3 {
-        border: $colour-delice thick double;
+        border-bottom: $colour-delice solid;
       }
     }
     .carte-4 {
+      & h2 {
+        font-size: 3rem;
+      }
       & h3 {
-        border: $colour-palette thick double;
+        border-bottom: $colour-palette solid;
       }
     }
 
@@ -129,6 +141,10 @@
       width: 12rem;
       & h3 {
         font-size: 1rem;
+      }
+      .lds-ellipsis {
+        position: relative;
+        left: 31%;
       }
     }
   }

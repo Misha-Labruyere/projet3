@@ -4,9 +4,11 @@
   list-style-type: none;
 }
 
-li.page-chic {
+li.page-chic,
+.carte-2 {
   h2 {
-    background: linear-gradient(to left, #905bfd, $colour-chic);
+    background: linear-gradient(to right, $colour-chic, #905bfd);
+    min-height: 70px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -15,9 +17,11 @@ li.page-chic {
 section {
   &.carte-2 {
     background-color: $background-chic;
-    font-family: $font-enchantee-carte;
+    font-family: $font-chic;
     color: $colour-chic;
-    &h2 {
+    & h2 {
+      margin-top: 20px;
+      padding-top: 10px;
       font-family: $font-chic;
     }
   }
@@ -30,12 +34,25 @@ ul.papilles {
   justify-content: space-between;
 }
 
+ul.sucre {
+  padding-bottom: 100px;
+}
+
+.papilles,
+.titre-papilles {
+  color: #a56799;
+}
+
+.sucre,
+.titre-sucre {
+  color: #6e4ccc;
+}
+
 li.intitules {
   min-width: 70%;
 }
 
 @include underline-section-chic;
-
 
 .line-chic {
   padding-right: 50px;

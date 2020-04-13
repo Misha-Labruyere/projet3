@@ -122,13 +122,23 @@
 }
 
 @mixin titre-menu($family, $size) {
-  & a,
-  h2:last-child {
+  & a, h2 {
     font-family: $family;
     font-size: $size;
   }
-  & h2:last-child:hover {
+  & a:hover {
     transform: scale(1.2);
     transition: ease-in-out 1.8s;
+  }
+}
+
+@mixin titre-bas {
+  .carte-1,
+  .carte-2,
+  .carte-3,
+  .carte-4 {
+    h2:last-child {
+      font-size: 2.8rem;
+    }
   }
 }

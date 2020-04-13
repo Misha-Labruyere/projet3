@@ -24,6 +24,23 @@ nav {
         opacity: 0.85;
       }
     }
+    li.page-enchantee {
+      @include titre-menu($font-enchantee, 2.7rem);
+      & a {
+        font-family: $font-palette;
+      }
+    }
+
+    li.page-chic {
+      @include titre-menu($font-chic, 2rem);
+    }
+
+    li.page-delice {
+      @include titre-menu($font-delice, 2.5rem);
+    }
+    li.page-palette {
+      @include titre-menu($font-palette, 2.3rem);
+    }
 
     li:nth-child(1) {
       background-color: $background-enchantee;
@@ -61,17 +78,73 @@ nav {
 
 .prochainement {
   display: flex;
+  flex-direction: column;
+  line-height: 1.2rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   width: 20rem;
   justify-content: center;
-  border: 1px solid black;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: $colour-primary;
   color: $colour-secondary;
+
+  .lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    left: 39%;
+    height: 40px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: $colour-secondary;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
 }

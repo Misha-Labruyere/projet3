@@ -11,7 +11,8 @@ body h1 {
   padding-bottom: 20px;
 }
 
-nav, section {
+nav,
+section {
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
@@ -45,7 +46,10 @@ h2:last-child {
   margin-top: 70px;
 }
 
-.carte-1, .carte-2, .carte-3, .carte-4 {
+.carte-1 :not(h2),
+.carte-2 :not(h2),
+.carte-3 :not(h2),
+.carte-4 :not(h2) {
   line-height: 3.5rem;
 }
 
@@ -77,7 +81,10 @@ body .prochainement {
   font-size: 1.5rem;
 }
 body h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
+}
+body .nom-menu {
+  font-size: 5.3rem;
 }
 body h3 {
   font-size: 2rem;
@@ -86,47 +93,10 @@ body li {
   font-size: 1.2rem;
 }
 
-ul li.page-enchantee a,
-ul li.page-enchantee h2:last-child {
-  font-family: "Zhi Mang Xing", cursive;
-  font-size: 2.7rem;
-}
-ul li.page-enchantee h2:last-child:hover {
-  transform: scale(1.2);
-  transition: ease-in-out 1.8s;
-}
-ul li.page-enchantee a {
-  font-family: "Kaushan Script", cursive;
-}
-ul li.page-chic a,
-ul li.page-chic h2:last-child {
-  font-family: "Amita", cursive;
-  font-size: 2.3rem;
-}
-ul li.page-chic h2:last-child:hover {
-  transform: scale(1.2);
-  transition: ease-in-out 1.8s;
-}
-ul li.page-delice a,
-ul li.page-delice h2:last-child {
-  font-family: "Dancing Script", cursive;
-  font-size: 2.3rem;
-}
-ul li.page-delice h2:last-child:hover {
-  transform: scale(1.2);
-  transition: ease-in-out 1.8s;
-}
-ul li.page-palette a,
-ul li.page-palette h2:last-child {
-  font-family: "Kaushan Script", cursive;
-  font-size: 2.3rem;
-}
-ul li.page-palette h2:last-child:hover {
-  transform: scale(1.2);
-  transition: ease-in-out 1.8s;
-}
-
-h2:last-child {
+.carte-1 h2:last-child,
+.carte-2 h2:last-child,
+.carte-3 h2:last-child,
+.carte-4 h2:last-child {
   font-size: 2.8rem;
 }
 
@@ -148,7 +118,7 @@ h2:last-child {
     font-size: 3.5rem;
   }
   body h2 {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
   body h2:last-child {
     font-size: 2rem;
@@ -159,16 +129,29 @@ h2:last-child {
     margin-bottom: 60px;
   }
   body .carte-1 h3 {
-    border: #3c1218 thick double;
+    border-bottom: #3c1218 solid;
   }
   body .carte-2 h3 {
-    border: #c77412 thick double;
+    font-size: 1.6rem;
+    border-bottom: #c77412 solid;
+  }
+  body .carte-2 .titre-papilles {
+    border-bottom: #a56799 solid;
+  }
+  body .carte-2 .titre-sucre {
+    border-bottom: #6e4ccc solid;
+  }
+  body .carte-3 h2 {
+    font-size: 3rem;
   }
   body .carte-3 h3 {
-    border: #54a8f9 thick double;
+    border-bottom: #54a8f9 solid;
+  }
+  body .carte-4 h2 {
+    font-size: 3rem;
   }
   body .carte-4 h3 {
-    border: #72bf56 thick double;
+    border-bottom: #72bf56 solid;
   }
   body ul {
     display: flex;
@@ -238,6 +221,10 @@ body .line-palette {
   body .prochainement h3 {
     font-size: 1rem;
   }
+  body .prochainement .lds-ellipsis {
+    position: relative;
+    left: 31%;
+  }
 
   nav ul li {
     min-width: 100%;
@@ -279,6 +266,41 @@ nav ul li:hover {
   box-shadow: 5px 10px 15px lightgrey;
   opacity: 0.85;
 }
+nav ul li.page-enchantee a, nav ul li.page-enchantee h2 {
+  font-family: "Zhi Mang Xing", cursive;
+  font-size: 2.7rem;
+}
+nav ul li.page-enchantee a:hover {
+  transform: scale(1.2);
+  transition: ease-in-out 1.8s;
+}
+nav ul li.page-enchantee a {
+  font-family: "Kaushan Script", cursive;
+}
+nav ul li.page-chic a, nav ul li.page-chic h2 {
+  font-family: "Amita", cursive;
+  font-size: 2rem;
+}
+nav ul li.page-chic a:hover {
+  transform: scale(1.2);
+  transition: ease-in-out 1.8s;
+}
+nav ul li.page-delice a, nav ul li.page-delice h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+}
+nav ul li.page-delice a:hover {
+  transform: scale(1.2);
+  transition: ease-in-out 1.8s;
+}
+nav ul li.page-palette a, nav ul li.page-palette h2 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.3rem;
+}
+nav ul li.page-palette a:hover {
+  transform: scale(1.2);
+  transition: ease-in-out 1.8s;
+}
 nav ul li:nth-child(1) {
   background-color: #fcdfdb;
 }
@@ -309,19 +331,74 @@ nav ul .page-enchantee h2 {
 
 .prochainement {
   display: flex;
+  flex-direction: column;
+  line-height: 1.2rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   width: 20rem;
   justify-content: center;
-  border: 1px solid black;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #579c87;
   color: #fdcb46;
+}
+.prochainement .lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  left: 39%;
+  height: 40px;
+}
+.prochainement .lds-ellipsis div {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fdcb46;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.prochainement .lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.prochainement .lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.prochainement .lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.prochainement .lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
 }
 
 footer {
@@ -441,18 +518,22 @@ section.carte-1 h3 span:hover::after {
   list-style-type: none;
 }
 
-li.page-chic h2 {
-  background: linear-gradient(to left, #905bfd, #c77412);
+li.page-chic h2,
+.carte-2 h2 {
+  background: linear-gradient(to right, #c77412, #905bfd);
+  min-height: 70px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 section.carte-2 {
   background-color: #fff5fe;
-  font-family: "Kalam", cursive;
+  font-family: "Amita", cursive;
   color: #c77412;
 }
-section.carte-2h2 {
+section.carte-2 h2 {
+  margin-top: 20px;
+  padding-top: 10px;
   font-family: "Amita", cursive;
 }
 
@@ -461,6 +542,20 @@ ul.papilles {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+ul.sucre {
+  padding-bottom: 100px;
+}
+
+.papilles,
+.titre-papilles {
+  color: #a56799;
+}
+
+.sucre,
+.titre-sucre {
+  color: #6e4ccc;
 }
 
 li.intitules {
@@ -498,18 +593,21 @@ section.carte-2 h3 span:hover::after {
   list-style-type: none;
 }
 
-li.page-delice h2 {
+li.page-delice h2, .carte-3 h2 {
   background: linear-gradient(to right, #0431df, #54a8f9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+li.page-delice h2 .carte-3, .carte-3 h2 .carte-3 {
+  min-height: 120px;
+}
 
 section.carte-3 {
   background-color: #f9f9f9;
-  font-family: "Kalam", cursive;
-  color: #54a8f9;
+  font-family: "Dancing Script", cursive;
 }
 section.carte-3 h2 {
+  margin-top: 30px;
   font-family: "Dancing Script", cursive;
 }
 
@@ -523,6 +621,10 @@ ul.terminer {
 
 li.intitules {
   min-width: 70%;
+}
+
+ul.terminer {
+  padding-bottom: 150px;
 }
 
 section.carte-3 h3 span {
@@ -546,8 +648,8 @@ section.carte-3 h3 span:hover::after {
 }
 
 .line-delice {
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .esquisse,
@@ -556,18 +658,19 @@ section.carte-3 h3 span:hover::after {
   list-style-type: none;
 }
 
-li.page-palette h2 {
+li.page-palette h2, .carte-4 h2 {
   background: linear-gradient(to right, #72bf56, #b7f97b);
+  min-height: 70px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 section.carte-4 {
   background-color: #fdfffd;
-  font-family: "Kalam", cursive;
-  color: #72bf56;
+  font-family: "Dancing Script", cursive;
 }
 section.carte-4 h2 {
+  margin-top: 20px;
   font-family: "Kaushan Script", cursive;
 }
 
@@ -581,6 +684,10 @@ ul.art {
 
 li.intitules {
   min-width: 70%;
+}
+
+ul.art {
+  padding-bottom: 150px;
 }
 
 section.carte-4 h3 span {

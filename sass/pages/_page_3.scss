@@ -4,20 +4,23 @@
   list-style-type: none;
 }
 
-li.page-delice {
+li.page-delice, .carte-3 {
   h2 {
     background: linear-gradient(to right, #0431df, $colour-delice);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    & .carte-3 {
+      min-height: 120px;
+    }
   }
 }
 
 section {
   &.carte-3 {
     background-color: $background-delice;
-    font-family: $font-enchantee-carte;
-    color: $colour-delice;
+    font-family: $font-delice;
     & h2 {
+      margin-top: 30px;
       font-family: $font-delice;
     }
   }
@@ -35,9 +38,13 @@ li.intitules {
   min-width: 70%;
 }
 
+ul.terminer {
+  padding-bottom: 150px;
+}
+
 @include underline-section-delice;
 
 .line-delice {
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 30px;
+  padding-left: 30px;
 }

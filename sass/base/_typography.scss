@@ -21,7 +21,11 @@ body {
   }
 
   & h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
+  }
+
+  & .nom-menu {
+    font-size: 5.3rem;
   }
 
   & h3 {
@@ -33,26 +37,4 @@ body {
   }
 }
 
-ul {
-  li.page-enchantee {
-    @include titre-menu($font-enchantee, 2.7rem);
-    & a {
-      font-family: $font-palette;
-    }
-  }
-
-  li.page-chic {
-    @include titre-menu($font-chic, 2.3rem);
-  }
-
-  li.page-delice {
-    @include titre-menu($font-delice, 2.3rem);
-  }
-  li.page-palette {
-    @include titre-menu($font-palette, 2.3rem);
-  }
-}
-
-h2:last-child {
-  font-size: 2.8rem;
-}
+@include titre-bas;
