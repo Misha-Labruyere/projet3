@@ -112,7 +112,8 @@ body li {
     width: 100%;
   }
   body img {
-    size: 30%;
+    width: 50px;
+    height: 50px;
   }
   body h1 {
     font-size: 3.5rem;
@@ -266,7 +267,8 @@ nav ul li:hover {
   box-shadow: 5px 10px 15px lightgrey;
   opacity: 0.85;
 }
-nav ul li.page-enchantee a, nav ul li.page-enchantee h2 {
+nav ul li.page-enchantee a,
+nav ul li.page-enchantee h2 {
   font-family: "Zhi Mang Xing", cursive;
   font-size: 2.7rem;
 }
@@ -277,7 +279,14 @@ nav ul li.page-enchantee a:hover {
 nav ul li.page-enchantee a {
   font-family: "Kaushan Script", cursive;
 }
-nav ul li.page-chic a, nav ul li.page-chic h2 {
+@media (max-width: 1024px) {
+  nav ul li.page-enchantee h2,
+nav ul li.page-enchantee a {
+    font-size: 2rem;
+  }
+}
+nav ul li.page-chic a,
+nav ul li.page-chic h2 {
   font-family: "Amita", cursive;
   font-size: 2rem;
 }
@@ -285,7 +294,17 @@ nav ul li.page-chic a:hover {
   transform: scale(1.2);
   transition: ease-in-out 1.8s;
 }
-nav ul li.page-delice a, nav ul li.page-delice h2 {
+@media (max-width: 1024px) {
+  nav ul li.page-chic {
+    min-width: 80vw;
+  }
+  nav ul li.page-chic h2,
+nav ul li.page-chic a {
+    font-size: 1.5rem;
+  }
+}
+nav ul li.page-delice a,
+nav ul li.page-delice h2 {
   font-family: "Dancing Script", cursive;
   font-size: 2.5rem;
 }
@@ -293,13 +312,26 @@ nav ul li.page-delice a:hover {
   transform: scale(1.2);
   transition: ease-in-out 1.8s;
 }
-nav ul li.page-palette a, nav ul li.page-palette h2 {
+@media (max-width: 1024px) {
+  nav ul li.page-delice h2,
+nav ul li.page-delice a {
+    font-size: 1.9rem;
+  }
+}
+nav ul li.page-palette a,
+nav ul li.page-palette h2 {
   font-family: "Kaushan Script", cursive;
   font-size: 2.3rem;
 }
 nav ul li.page-palette a:hover {
   transform: scale(1.2);
   transition: ease-in-out 1.8s;
+}
+@media (max-width: 1024px) {
+  nav ul li.page-palette h2,
+nav ul li.page-palette a {
+    font-size: 1.9rem;
+  }
 }
 nav ul li:nth-child(1) {
   background-color: #fcdfdb;
@@ -463,6 +495,8 @@ h3 {
   position: relative;
   left: 44%;
   margin-top: 20px;
+  width: 100px;
+  height: 100px;
 }
 
 .prelude,
@@ -503,6 +537,87 @@ section.carte-1 h3 span:after {
   transition: transform 0.55s ease-out;
 }
 section.carte-1 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+section.carte-2 h3 span {
+  position: relative;
+}
+section.carte-2 .titre-appetit span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #c77412;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-2 .titre-papilles span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #a56799;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-2 .titre-sucre span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #6e4ccc;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-2 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+section.carte-3 h3 span {
+  position: relative;
+}
+section.carte-3 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #54a8f9;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-3 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+section.carte-4 h3 span {
+  position: relative;
+}
+section.carte-4 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #72bf56;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-4 h3 span:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -562,10 +677,29 @@ li.intitules {
   min-width: 70%;
 }
 
+section.carte-1 h3 span {
+  position: relative;
+}
+section.carte-1 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #3c1218;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-1 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 section.carte-2 h3 span {
   position: relative;
 }
-section.carte-2 h3 span:after {
+section.carte-2 .titre-appetit span:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -577,7 +711,69 @@ section.carte-2 h3 span:after {
   transform-origin: bottom right;
   transition: transform 0.55s ease-out;
 }
+section.carte-2 .titre-papilles span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #a56799;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-2 .titre-sucre span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #6e4ccc;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
 section.carte-2 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+section.carte-3 h3 span {
+  position: relative;
+}
+section.carte-3 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #54a8f9;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-3 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+section.carte-4 h3 span {
+  position: relative;
+}
+section.carte-4 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #72bf56;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-4 h3 span:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -627,6 +823,68 @@ ul.terminer {
   padding-bottom: 150px;
 }
 
+section.carte-1 h3 span {
+  position: relative;
+}
+section.carte-1 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #3c1218;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-1 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+section.carte-2 h3 span {
+  position: relative;
+}
+section.carte-2 .titre-appetit span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #c77412;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-2 .titre-papilles span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #a56799;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-2 .titre-sucre span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #6e4ccc;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-2 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 section.carte-3 h3 span {
   position: relative;
 }
@@ -643,6 +901,25 @@ section.carte-3 h3 span:after {
   transition: transform 0.55s ease-out;
 }
 section.carte-3 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+section.carte-4 h3 span {
+  position: relative;
+}
+section.carte-4 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #72bf56;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-4 h3 span:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -690,6 +967,87 @@ ul.art {
   padding-bottom: 150px;
 }
 
+section.carte-1 h3 span {
+  position: relative;
+}
+section.carte-1 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #3c1218;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-1 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+section.carte-2 h3 span {
+  position: relative;
+}
+section.carte-2 .titre-appetit span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #c77412;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-2 .titre-papilles span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #a56799;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-2 .titre-sucre span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #6e4ccc;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-2 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+section.carte-3 h3 span {
+  position: relative;
+}
+section.carte-3 h3 span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #54a8f9;
+  transform-origin: bottom right;
+  transition: transform 0.55s ease-out;
+}
+section.carte-3 h3 span:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 section.carte-4 h3 span {
   position: relative;
 }

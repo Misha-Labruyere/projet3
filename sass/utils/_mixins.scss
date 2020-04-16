@@ -14,7 +14,7 @@
   }
 }
 
-@mixin underline-section-enchantee {
+@mixin underline-section {
   section {
     &.carte-1 {
       h3 span {
@@ -37,17 +37,12 @@
         transform-origin: bottom left;
       }
     }
-  }
-}
 
-@mixin underline-section-chic {
-  section {
     &.carte-2 {
       h3 span {
         position: relative;
       }
-
-      h3 span:after {
+      .titre-appetit span:after {
         content: "";
         position: absolute;
         width: 100%;
@@ -59,21 +54,40 @@
         transform-origin: bottom right;
         transition: transform 0.55s ease-out;
       }
+      .titre-papilles span:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $colour-chic-papilles;
+        transform-origin: bottom right;
+        transition: transform 0.55s ease-out;
+      }
+      .titre-sucre span:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $colour-chic-sucre;
+        transform-origin: bottom right;
+        transition: transform 0.55s ease-out;
+      }
       h3 span:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
       }
     }
-  }
-}
 
-@mixin underline-section-delice {
-  section {
     &.carte-3 {
       h3 span {
         position: relative;
       }
-
       h3 span:after {
         content: "";
         position: absolute;
@@ -91,16 +105,11 @@
         transform-origin: bottom left;
       }
     }
-  }
-}
 
-@mixin underline-section-palette {
-  section {
     &.carte-4 {
       h3 span {
         position: relative;
       }
-
       h3 span:after {
         content: "";
         position: absolute;
@@ -122,7 +131,8 @@
 }
 
 @mixin titre-menu($family, $size) {
-  & a, h2 {
+  & a,
+  h2 {
     font-family: $family;
     font-size: $size;
   }

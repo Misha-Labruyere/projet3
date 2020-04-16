@@ -7,6 +7,8 @@ h3 {
   position: relative;
   left: 44%;
   margin-top: 20px;
+  width: 100px;
+  height: 100px;
 }
 
 .prelude,
@@ -33,7 +35,7 @@ ul.orgue {
   justify-content: space-between;
 }
 
-@include underline-section-enchantee;
+@include underline-section;
 
 .line-enchantee {
   padding-left: 50px;

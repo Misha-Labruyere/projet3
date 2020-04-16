@@ -40,19 +40,19 @@ ul.sucre {
 
 .papilles,
 .titre-papilles {
-  color: #a56799;
+  color: $colour-chic-papilles;
 }
 
 .sucre,
 .titre-sucre {
-  color: #6e4ccc;
+  color: $colour-chic-sucre;
 }
 
 li.intitules {
   min-width: 70%;
 }
 
-@include underline-section-chic;
+@include underline-section;
 
 .line-chic {
   padding-right: 50px;
