@@ -1,5 +1,5 @@
 * {
-  margin-block-start: 0px;
+  margin: 0px;
 }
 body {
   margin-left: auto;
@@ -36,8 +36,9 @@ footer {
 }
 
 h3 :not(.prochainement) {
-  margin-top: 50px;
-}
+    margin-top: 50px;
+  }
+
 
 h2:last-child {
   margin-top: 70px;
